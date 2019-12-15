@@ -1,0 +1,33 @@
+{
+  "name": "yourpixel",
+  "version": "1.0.0",
+  "description": "Community pixels for a larger image.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonRuby/yourpixel.git"
+  },
+  "author": "Jackson Ruby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacksonRuby/yourpixel/issues"
+  },
+  "homepage": "https://github.com/JacksonRuby/yourpixel#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "connect-flash": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-fileupload": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "fs-extra": "*",
+    "get-pixels": "^3.3.2",
+    "mongoose": "*",
+    "save-pixels": "^2.3.4"
+  }
+}
