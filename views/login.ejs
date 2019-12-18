@@ -1,0 +1,45 @@
+<%- include ('_layouts/_header') -%>
+
+<main>
+    <section>
+        <div class="page-title">
+            <h1>Login</h1>
+        </div>
+        <form method="POST" action="/login" class="form-login">
+            <div class ="form-field">
+                <label for="username">Username</label>
+                <input type="text" class="form-input" name="username"
+                <%
+                if (typeof user !== 'undefined'){
+                    %>
+                    value="<%= user %>"
+                    <%
+                }
+                %>
+                >
+            </div>
+            <div class ="form-field">
+                <label for="password">Password</label>
+                <input type="password" class="form-input" name="password">
+            </div>
+            <div class ="form-field">
+                <input type="submit" class="form-submit" value="Login">
+            </div>
+
+            <%
+            if (typeof errorData !== 'undefined'){
+                for(var error of errorData.errors){
+                    %>
+                    <p><%= error.msg %></p>
+                    <%
+                }
+            }
+            %>
+
+        </form>
+
+    </section>
+
+</main>
+
+<%- include ('_layouts/_footer') -%>

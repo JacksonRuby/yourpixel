@@ -1,0 +1,44 @@
+<%- include ('_layouts/_header') -%>
+
+<main>
+    <section>
+        <div class="page-title">
+            <h1>MAIN</h1>
+        </div>
+        <h2>Congrats you created basic login.</h2>
+
+        <form method="POST" action="/login" class="form-pixel">
+            <div class ="form-field">
+                <label for="pixelX">X Coordinate</label>
+                <input type="text" class="form-input" name="pixelX">
+            </div>
+            <div class ="form-field">
+                <label for="pixelY">Y Coordinate</label>
+                <input type="text" class="form-input" name="pixelY">
+            </div>
+            <div class ="form-field">
+                <label for="colour">New colour</label>
+                <input type="color" class="form-input" name="colour">
+            </div>
+            <div class ="form-field">
+                <input type="submit" class="form-submit" value="Submit">
+            </div>
+
+            <%
+            if (typeof errorData !== 'undefined'){
+                for(var error of errorData.errors){
+                    %>
+                    <p><%= error.msg %></p>
+                    <%
+                }
+            }
+            %>
+
+        </form>
+
+        <img class="main-image" src="/images/main.jpg">
+
+    </section>
+</main>
+
+<%- include ('_layouts/_footer') -%>

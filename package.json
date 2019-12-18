@@ -28,6 +28,7 @@
     "fs-extra": "*",
     "get-pixels": "^3.3.2",
     "mongoose": "*",
-    "save-pixels": "^2.3.4"
+    "save-pixels": "^2.3.4",
+    "zeros": "^1.0.0"
   }
 }
